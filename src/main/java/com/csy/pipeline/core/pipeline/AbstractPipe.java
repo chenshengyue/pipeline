@@ -5,8 +5,6 @@ import com.csy.pipeline.core.pipeline.rollback.RollBack;
 import com.csy.pipeline.core.pipeline.success.Success;
 import lombok.extern.slf4j.Slf4j;
 
-import java.util.List;
-
 @Slf4j
 public abstract class AbstractPipe<T, S> implements Pipe<T, S> {
 

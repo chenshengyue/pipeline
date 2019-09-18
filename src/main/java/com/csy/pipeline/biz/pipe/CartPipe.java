@@ -17,7 +17,7 @@ public class CartPipe extends AbstractPipe<CreateOrderRequest, CreateOrderContex
 
     @Override
     protected void bizHandler(CreateOrderRequest createOrderRequest, CreateOrderContext createOrderContext) {
-        log.info("执行CartPipe");
+        createOrderContext.setCartInfo("1");
     }
 
 }

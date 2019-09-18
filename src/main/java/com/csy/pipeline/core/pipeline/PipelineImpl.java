@@ -38,10 +38,6 @@ public class PipelineImpl<T, S> implements Pipeline<T, S> {
 
         private String key;
 
-        private boolean needSuccess = true;
-
-        private boolean needRollBack = true;
-
         private List<RollBack<T, S>> rollBackList = Lists.newArrayList();
 
         private List<Success<T, S>> successList = Lists.newArrayList();
@@ -79,16 +75,6 @@ public class PipelineImpl<T, S> implements Pipeline<T, S> {
         @Override
         public List<Success<T, S>> getSuccessList() {
             return successList;
-        }
-
-        @Override
-        public boolean needSuccess() {
-            return needSuccess;
-        }
-
-        @Override
-        public boolean needRollBack() {
-            return needRollBack;
         }
 
         @Override

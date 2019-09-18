@@ -17,6 +17,7 @@ public class InsertOrderPipe extends AbstractPipe<CreateOrderRequest, CreateOrde
 
     @Override
     protected void bizHandler(CreateOrderRequest request, CreateOrderContext context) {
+        log.info("执行InsertOrderPipe");
         context.setOrderId(1L);
     }
 

@@ -24,8 +24,4 @@ public interface InvocationChain<T, S> {
 
     List<Success<T, S>> getSuccessList();
 
-    boolean needSuccess();
-
-    boolean needRollBack();
-
 }

@@ -17,7 +17,7 @@ public class BuildBargainOrderPipe extends AbstractPipe<CreateOrderRequest, Crea
 
     @Override
     protected void bizHandler(CreateOrderRequest createOrderRequest, CreateOrderContext createOrderContext) {
-
+        log.info("执行BuildBargainOrderPipe");
     }
 
 }

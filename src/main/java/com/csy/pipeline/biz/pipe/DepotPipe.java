@@ -19,7 +19,7 @@ public class DepotPipe extends AbstractPipe<CreateOrderRequest, CreateOrderConte
 
     @Override
     protected void bizHandler(CreateOrderRequest createOrderRequest, CreateOrderContext createOrderContext) {
-
+        log.info("执行DepotPipe");
     }
 
     @Override

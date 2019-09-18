@@ -17,7 +17,7 @@ public class FreightPipe extends AbstractPipe<CreateOrderRequest, CreateOrderCon
 
     @Override
     protected void bizHandler(CreateOrderRequest createOrderRequest, CreateOrderContext createOrderContext) {
-
+        log.info("执行FreightPipe");
     }
 
 }

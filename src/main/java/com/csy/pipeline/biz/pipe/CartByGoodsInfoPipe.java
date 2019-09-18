@@ -17,7 +17,7 @@ public class CartByGoodsInfoPipe extends AbstractPipe<CreateOrderRequest, Create
 
     @Override
     protected void bizHandler(CreateOrderRequest createOrderRequest, CreateOrderContext createOrderContext) {
-
+        log.info("执行CartByGoodsInfoPipe");
     }
 
 }

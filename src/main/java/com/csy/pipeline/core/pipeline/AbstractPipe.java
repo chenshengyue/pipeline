@@ -49,21 +49,17 @@ public abstract class AbstractPipe<T, S> implements Pipe<T, S> {
     protected abstract void bizHandler(T t, S s);
 
     private void rollbackAdd(InvocationChain<T, S> invocationChain) {
-        if (invocationChain.needRollBack()) {
-            List<RollBack<T, S>> rollBackList = invocationChain.getRollBackList();
-            if (this instanceof RollBack && rollBackList != null) {
-                rollBackList.add((RollBack) this);
-            }
+        if (this instanceof RollBack) {
+            invocationChain.getRollBackList().add((RollBack) this);
         }
+
     }
 
     private void successAdd(InvocationChain<T, S> invocationChain) {
-        if (invocationChain.needSuccess()) {
-            List<Success<T, S>> successList = invocationChain.getSuccessList();
-            if (this instanceof Success && successList != null) {
-                successList.add((Success<T, S>) this);
-            }
+        if (this instanceof Success) {
+            invocationChain.getSuccessList().add((Success<T, S>) this);
         }
+
     }
 
 }

@@ -28,6 +28,11 @@ public class PipelineImpl<T, S> implements Pipeline<T, S> {
         return new InvocationChainImpl(t, s);
     }
 
+    /**
+     * 管道流私有一个执行链类
+     * @param <T>
+     * @param <S>
+     */
     private final class InvocationChainImpl<T, S> implements InvocationChain<T, S> {
 
         private int executedIndex = -1;
@@ -77,6 +82,9 @@ public class PipelineImpl<T, S> implements Pipeline<T, S> {
             return successList;
         }
 
+        /**
+         * 管道流执行入口
+         */
         @Override
         public void invoke() {
 
@@ -86,6 +94,9 @@ public class PipelineImpl<T, S> implements Pipeline<T, S> {
             invokeNext();
         }
 
+        /**
+         * 递归调用管道
+         */
         @Override
         public void invokeNext() {
 
